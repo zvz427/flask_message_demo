@@ -1,2 +1,6 @@
 # flask_message_demo
 使用flask文档测试留言板信息运行
+
+参照狗书运行前几章节的代码，使用插件flask_wtf的flaskform测试留言板和连接mysql数据库
+
+扩展使用ajax将数据post到后端，保存到数据库

@@ -1,0 +1,2 @@
+# flask_message_demo
+使用flask文档测试留言板信息运行

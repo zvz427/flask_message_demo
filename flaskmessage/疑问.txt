@@ -1,0 +1,12 @@
+Jinja2 还支持宏。宏类似于 Python 代码中的函数。例如：
+{% macro render_comment(comment) %}     <li>{{ comment }}</li> {% endmacro %}
+
+<ul>     {% for comment in comments %}         {{ render_comment(comment) }}     {% endfor %} </ul>
+为了重复使用宏，我们可以将其保存在单独的文件中，然后在需要使用的模板中导入：
+{% import 'macros.html' as macros %} <ul>     {% for comment in comments %}         {{ macros.render_comment(comment) }}     {% endfor %} </ul> `
+
+
+外键的定义
+class Role(db.Model):     # ...     users = db.relationship('User', backref='role')
+
+class User(db.Model):     # ...     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
